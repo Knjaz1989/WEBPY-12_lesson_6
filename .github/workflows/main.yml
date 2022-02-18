@@ -33,6 +33,9 @@ jobs:
           POSTGRES_DB: WEBPY
           DB_HOST: db
         run: docker-compose up -d
+        
+      - name: Check containers
+        run: docker ps -a
 
 #       - name: Push
 #         run: heroku container:push -a ${{ secrets.HEROKU_APP_NAME }} web
