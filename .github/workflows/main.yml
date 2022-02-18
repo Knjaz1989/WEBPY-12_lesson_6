@@ -26,12 +26,18 @@ jobs:
         run: heroku container:login
       
       - name: Build image
+        env:
+          DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB: WEBPY
+          DB_HOST: db
         run: docker-compose up -d
 
-      - name: Push
-        run: heroku container:push -a ${{ secrets.HEROKU_APP_NAME }} web
+#       - name: Push
+#         run: heroku container:push -a ${{ secrets.HEROKU_APP_NAME }} web
         
-      - name: Release
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY}}
-        run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} web
+#       - name: Release
+#         env:
+#           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY}}
+#         run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} web
