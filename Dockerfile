@@ -8,6 +8,8 @@ WORKDIR /stocks_products
 
 RUN apk update && apk add nano gcc python3-dev libpq-dev
 
+RUN export PATH=/usr/lib/postgresql/X.Y/bin/:$PATH
+
 RUN python -m pip install --upgrade pip && pip install setuptools && pip install -r requirements.txt
 
 RUN chmod +x /stocks_products/entrypoint.sh
