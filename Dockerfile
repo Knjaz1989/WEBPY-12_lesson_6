@@ -8,7 +8,7 @@ WORKDIR /stocks_products
 
 RUN apk update && apk add nano
 
-RUN apk install python-dev
+RUN apk add python-dev
 
 RUN python -m pip install --upgrade pip && pip install setuptools && pip install -r requirements.txt
 
