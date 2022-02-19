@@ -6,7 +6,7 @@ COPY ./stocks_products ./stocks_products
 
 WORKDIR /stocks_products
 
-RUN apk update && apk add nano gcc python3-dev libpq-dev
+RUN apk update && apk add nano gcc
 
 RUN export PATH=/usr/lib/postgresql/X.Y/bin/:$PATH
 
