@@ -6,7 +6,7 @@ COPY ./stocks_products ./stocks_products
 
 WORKDIR /stocks_products
 
-RUN apk update && apk add nano
+RUN apk update && apk add nano && apk add gcc
 
 RUN python -m pip install --upgrade pip && pip install -r requirements.txt
 
