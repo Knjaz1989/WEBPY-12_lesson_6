@@ -6,9 +6,9 @@ COPY ./stocks_products ./stocks_products
 
 WORKDIR /stocks_products
 
-RUN apk update && apk add nano gcc libpq5-devel
+RUN apk update && apk add nano gcc
 
-RUN export PATH=/usr/lib/postgresql/X.Y/bin/:$PATH
+RUN export PATH=/usr/local/pgsql/bin:$PATH
 
 RUN python -m pip install --upgrade pip && pip install setuptools && pip install -r requirements.txt
 
