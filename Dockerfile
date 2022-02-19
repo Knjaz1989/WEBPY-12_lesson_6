@@ -8,7 +8,7 @@ WORKDIR /stocks_products
 
 RUN apk update && apk add nano
 
-RUN pip install psycopg2-binary
+RUN apk install python-dev
 
 RUN python -m pip install --upgrade pip && pip install setuptools && pip install -r requirements.txt
 
