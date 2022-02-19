@@ -8,7 +8,7 @@ WORKDIR /stocks_products
 
 RUN apk update && apk add nano
 
-RUN apk add libpq-dev
+RUN apk add libpq-dev && apk add python3-dev
 
 RUN python -m pip install --upgrade pip && pip install -r requirements.txt
 
