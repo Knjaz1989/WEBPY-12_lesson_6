@@ -8,8 +8,6 @@ WORKDIR /stocks_products
 
 RUN apk update && apk add nano
 
-RUN apk add python3-dev
-
 RUN python -m pip install --upgrade pip && pip install setuptools && pip install -r requirements.txt
 
 RUN chmod +x /stocks_products/entrypoint.sh
