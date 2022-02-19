@@ -8,7 +8,7 @@ WORKDIR /stocks_products
 
 RUN apk update && apk add nano && apk add gcc
 
-RUN python -m pip install --upgrade pip && pip install -r requirements.txt
+RUN python -m pip install --upgrade pip && pip install setuptools && pip install -r requirements.txt
 
 RUN chmod +x /stocks_products/entrypoint.sh
 
