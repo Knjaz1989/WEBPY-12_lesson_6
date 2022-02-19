@@ -6,7 +6,7 @@ COPY ./stocks_products ./stocks_products
 
 WORKDIR /stocks_products
 
-RUN apk update && apk add nano && apk add gcc
+RUN apk update && apk add nano && apk add gcc && apk add libpq-dev
 
 RUN python -m pip install --upgrade pip && pip install setuptools && pip install -r requirements.txt
 
