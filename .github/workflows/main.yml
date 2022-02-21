@@ -38,8 +38,8 @@ jobs:
       - name: Check containers
         run: docker ps
         
-      - name: Get postgres_db logs
-        run: docker logs --details postgres_db
+#      - name: Get postgres_db logs
+#        run: docker logs --details postgres_db
 
       - name: Push
         env:
