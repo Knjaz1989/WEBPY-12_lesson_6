@@ -3,4 +3,3 @@ djangorestframework
 django-filter
 gunicorn
 psycopg2-binary
-django-heroku
