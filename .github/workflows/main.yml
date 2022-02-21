@@ -33,7 +33,7 @@ jobs:
           POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
           POSTGRES_DB: WEBPY
           DB_HOST: db
-        run: docker-compose up -d
+        run: docker-compose --build
         
       - name: Check containers
         run: docker ps
