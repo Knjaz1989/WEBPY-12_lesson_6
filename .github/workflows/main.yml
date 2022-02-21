@@ -26,13 +26,13 @@ jobs:
         run: heroku container:login
       
       - name: Build image
-        env:
-          POSTGRES_HOST_AUTH_METHOD: trust
-          DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
-          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
-          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-          POSTGRES_DB: WEBPY
-          DB_HOST: db
+#        env:
+#          POSTGRES_HOST_AUTH_METHOD: trust
+#          DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+#          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+#          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+#          POSTGRES_DB: WEBPY
+#          DB_HOST: db
         run: docker-compose build
         
       - name: Check images
