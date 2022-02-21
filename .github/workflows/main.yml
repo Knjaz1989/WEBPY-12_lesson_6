@@ -42,7 +42,7 @@ jobs:
         run: docker logs --details postgres_db
 
       - name: Push
-        run: heroku container:push -a ${{ secrets.HEROKU_APP_NAME }} web
+        run: heroku container:push web -app ${{ secrets.HEROKU_APP_NAME }}
         
 #       - name: Release
 #         env:
