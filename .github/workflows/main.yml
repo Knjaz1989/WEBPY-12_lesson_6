@@ -35,8 +35,8 @@ jobs:
           DB_HOST: db
         run: docker-compose build
         
-      - name: Check containers
-        run: docker ps
+      - name: Check images
+        run: docker images
 
       - name: Push
         env:
