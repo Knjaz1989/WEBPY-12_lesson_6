@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn stocks_products.wsgi
+web: -b 0.0.0.0:8000 gunicorn stocks_products.wsgi
